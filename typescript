@@ -1,0 +1,358 @@
+Script started on 2021-06-01 00:13:49-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="113" LINES="33"]
+]0;jack@jack-ubuntu-machine: ~/cs201/a4[01;32mjack@jack-ubuntu-machine[00m:[01;34m~/cs201/a4[00m$ mka[K[Kake 
+gcc main.c -lm -o a4
+]0;jack@jack-ubuntu-machine: ~/cs201/a4[01;32mjack@jack-ubuntu-machine[00m:[01;34m~/cs201/a4[00m$ ./a4 10 5
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 1
+10 + 5 = 15
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 2
+10 - 5 = 5
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 3
+10 * 5 = 50
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 4
+10 / 5 = 2.000000
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 5
+10 mod 5 = 0
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 6
+5 10 
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 7
+Invalid Selection. Try again
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 9
+Invalid Selection. Try again
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 0
+]0;jack@jack-ubuntu-machine: ~/cs201/a4[01;32mjack@jack-ubuntu-machine[00m:[01;34m~/cs201/a4[00m$ ./a4 0x1a 14
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 1
+26 + 14 = 40
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 2
+26 - 14 = 12
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 3
+26 * 14 = 364
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 4
+26 / 14 = 1.857143
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 5
+26 mod 14 = 12
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 6
+14 0x26 
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 7
+Invalid Selection. Try again
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 0
+]0;jack@jack-ubuntu-machine: ~/cs201/a4[01;32mjack@jack-ubuntu-machine[00m:[01;34m~/cs201/a4[00m$ ./a4 0x1a 14 3 4[K0x2b
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 1
+26 + 14 + 3 + 43 = 86
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 2
+26 - 14 - 3 - 43 = -34
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 3
+26 * 14 * 3 * 43 = 46956
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 4
+26 / 14 = 1.857143
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 5
+26 mod 14 = 12
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 6
+0x43 3 14 0x26 
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 0
+]0;jack@jack-ubuntu-machine: ~/cs201/a4[01;32mjack@jack-ubuntu-machine[00m:[01;34m~/cs201/a4[00m$ exit[K[K[K[K./a4 0x1c [K[K[K[K[K12 33 44 55
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 1
+12 + 33 + 44 + 55 = 144
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 2
+12 - 33 - 44 - 55 = -120
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 3
+12 * 33 * 44 * 55 = 958320
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 4
+12 / 33 = 0.363636
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 5
+12 mod 33 = 12
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 6
+55 44 33 12 
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 7
+Invalid Selection. Try again
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 0
+]0;jack@jack-ubuntu-machine: ~/cs201/a4[01;32mjack@jack-ubuntu-machine[00m:[01;34m~/cs201/a4[00m$ ./a4 12 33 44 55[K[K[K[K[K[K[K[K[K[K[K0x11 0x aa[K[K[Kaa 0x3a[Kb
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 1
+17 + 20 + 59 = 96
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 2
+17 - 20 - 59 = -62
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 3
+17 * 20 * 59 = 20060
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 4
+17 / 20 = 0.850000
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 5
+17 mod 20 = 17
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 6
+0x59 0x20 0x17 
+ 0. Exit
+ 1. Addition
+ 2. Substraction
+ 3. Multiplication
+ 4. Division
+ 5. Modulo
+ 6. Reverse Input
+Menu Item: 0
+]0;jack@jack-ubuntu-machine: ~/cs201/a4[01;32mjack@jack-ubuntu-machine[00m:[01;34m~/cs201/a4[00m$ exit
+exit
+
+Script done on 2021-06-01 00:16:54-07:00 [COMMAND_EXIT_CODE="0"]
