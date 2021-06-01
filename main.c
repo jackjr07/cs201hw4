@@ -21,6 +21,34 @@ int addition(char *argv[], int total){
     }
 };
 
+int upHex(char argvH[]){
+    int sum = 0;
+    for(int i =0; i<2; ++i){
+        int hold = argvH[i];
+        printf("%d - hold\n", hold);
+        if(hold >= 48 && hold <= 57){
+            hold -= 48;
+            sum += hold;
+            //printf("%d - sum\n", sum);
+        }
+        else if(hold >= 97 && hold <= 102){
+            hold -= 87;
+            sum += hold;
+            //printf("%d - sum\n", sum);
+        }
+    }
+    printf("%d - Fsum\n", sum);
+    return sum;
+}
+int additionH(char *argvH[], int total){
+    int hold, sum = 0;
+    for(int i = 1; i<=total; ++i){
+        printf("%s --\n", argvH[i]);
+        hold += upHex(argvH[i]+2);
+    }
+    printf("%d - sumH", sum);
+    
+};
 int substraction(char *argv[], int total){
     int i = 1;
     int diff = atoi(argv[i]);
@@ -61,8 +89,8 @@ int division(char *argv[], int total){
         printf("%s / %s = -nan\n", argv[i], argv[i+1]);
         return 1;
     }
-    int div = atoi(argv[i])/atoi(argv[i+1]);
-    printf("%s / %s = %d\n", argv[i], argv[i+1], div);
+    float div = (float)atoi(argv[i])/(float)atoi(argv[i+1]);
+    printf("%s / %s = %f\n", argv[i], argv[i+1], div);
 }
 
 int modulo(char *argv[], int total){
@@ -83,28 +111,27 @@ int updateHexToDec(char argvD[]){
     int sum = 0;
     for(int i = 0; i<2; ++i){
        int hold = argvD[i];
-       printf("%d - hold\n", hold);
+       //printf("%d - hold\n", hold);
         if(hold >= 48 && hold <= 57){
             hold -= 48;
             sum += hold;
             if(i==0) sum *= 16;
-            printf("%d - sum\n", sum);
+            //printf("%d - sum\n", sum);
 
         }
         else if(hold >= 97 && hold <= 102){
             hold -= 87;
             sum += hold;
-            printf("%d - sum\n", sum);
+            //printf("%d - sum\n", sum);
         }
     }
-    printf("%d - Fsum\n", sum);
+    //printf("%d - Fsum\n", sum);
     return sum;
 }
 
 int main(int argc, char *argv[]){
 
     //Create Vals
-
     int ans = 99;
     int total = argc-1;
     char *argvH[total];
@@ -133,12 +160,23 @@ int main(int argc, char *argv[]){
         }
         ++j;
     }
-
-    //Update decimal to Hex
-
 /*
+    printf("%s\n", argv[1]);
+    //Update decimal to Hex
+    int k = 1;
+    while(k <=total){
+        if(argv[k][1] == 'x'){
+            printf("%s\n", argv[k]+2);
+            argvH[k] = argv[k];
+        }else{
+            char hold[] = "0x";
+            strcat(hold, argv[k]);
+            argvH[k] = hold;
+        }
+        ++k;
+    }
     for(int i = 1; i <= total; ++i){
-        printf("%s - ", argvD[i]);
+        printf("%s - ", argvH[i]);
     }
     */
     
@@ -172,5 +210,10 @@ int menu(){
     printf(" 0. Exit\n 1. Addition\n 2. Substraction\n 3. Multiplication\n 4. Division\n 5. Modulo\n 6. Reverse Input\n");
     printf("Menu Item: ");
     scanf("%d", &ans);
-    return ans;
+    if(ans >= 0 && ans <= 6){
+        return ans;
+    }else{
+        printf("Invalid Selection. Try again\n");
+        return menu();
+    }
 }
