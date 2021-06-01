@@ -1,33 +1,152 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <math.h>
 
 int menu();
+
+int addition(char *argv[], int total){
+    int i = 1;
+    int sum = 0;
+    while(i <= total){
+        sum += atoi(argv[i]);
+        ++i;
+    }
+    for(int i = 1; i <= total; ++i){
+       if(i == total){
+        printf("%s = %d\n", argv[i], sum);
+       }else{
+        printf("%s + ", argv[i]);
+       }
+    }
+};
+
+int substraction(char *argv[], int total){
+    int i = 1;
+    int diff = atoi(argv[i]);
+    ++i;
+    while(i <= total){
+        diff -= atoi(argv[i]);
+        ++i;
+    }
+    for(int i = 1; i <= total; ++i){
+       if(i == total){
+        printf("%s = %d\n", argv[i], diff);
+       }else{
+        printf("%s - ", argv[i]);
+       }
+    }
+}
+
+int multiplication(char *argv[], int total){
+    int i = 1;
+    int mul = atoi(argv[i]);
+    ++i;
+    while(i <= total){
+        mul *= atoi(argv[i]);
+        ++i;
+    }
+    for(int i = 1; i <= total; ++i){
+       if(i == total){
+        printf("%s = %d\n", argv[i], mul);
+       }else{
+        printf("%s * ", argv[i]);
+       }
+    }
+}
+
+int division(char *argv[], int total){
+    int i = 1;
+    if(atoi(argv[i+1]) == 0){
+        printf("%s / %s = -nan\n", argv[i], argv[i+1]);
+        return 1;
+    }
+    int div = atoi(argv[i])/atoi(argv[i+1]);
+    printf("%s / %s = %d\n", argv[i], argv[i+1], div);
+}
+
+int modulo(char *argv[], int total){
+    int i = 1;
+    int mod = atoi(argv[i]) % atoi(argv[i+1]);
+    printf("%s mod %s = %d\n", argv[i], argv[i+1], mod);
+}
+
+int reverse(char * argv[], int total){
+    while(total != 0){
+        printf("%s ", argv[total]);
+        --total;
+    }
+    printf("\n");
+}
+
+int updateHexToDec(char argvD[]){
+    int sum = 0;
+    for(int i = 0; i<2; ++i){
+       int hold = argvD[i];
+       printf("%d, - Hold", hold);
+    }
+}
 
 int main(int argc, char *argv[]){
 
     //Create Vals
-    int i = 0;
-    int sum = 0;
-    int diff = 0;
-    int multiplication = 0;
-    int divide = 0;
-    int modulo = 0;
 
-    //start menu
-    int ans = menu();
+    int ans = 99;
+    int total = argc-1;
+    char *argvH[total];
+    char *argvD[total];
 
     //Check does user gave enough parameters
-    if(argc != 3){
-        printf("You MUST give 2 numbers");
+    if(argc < 3 || argc > 16){
+        if(argc < 3){
+            printf("You MUST give at least 2 numbers\n");
+        }else{
+            printf("You give too much number, MAX at 15 parameters\n");
+        }
         return 0;
     }
+    //update hex to decimal
+    int j = 1;
+    while(j <=total){
+        if(argv[j][1] == 'x'){
+            printf("%s\n", argv[j]+2);
+            argvD[j] = argv[j]+2;
+            printf("%d - T\n", argvD[j][1]);
+            updateHexToDec(argvD[j]);
+        }else{
+            argvD[j] = argv[j];
+        }
+        ++j;
+    }
 
-    sum = atoi(argv[1])+atoi(argv[2]);
-    diff = atoi(argv[1]) - atoi(argv[2]);
+    //Update decimal to Hex
 
-    printf("Sum: %d\n", sum);
-    printf("Different: %d\n", diff);
+
+    for(int i = 1; i <= total; ++i){
+        printf("%s - ", argvD[i]);
+    }
+    
+    while(ans != 0){
+        ans = menu();
+        if(ans == 1){
+            addition(argvD, total);
+        }
+        else if(ans == 2){
+            substraction(argv, total);
+        }
+        else if(ans == 3){
+            multiplication(argv, total);
+        }
+        else if(ans == 4){
+            division(argv, total);
+        }
+        else if(ans == 5){
+            modulo(argv, total);
+        }
+        else if(ans == 6){
+            reverse(argv, total);
+        }
+    }
 
     return 0;
 }
