@@ -83,22 +83,14 @@ int updateHexToDec(char argvD[]){
     int sum = 0;
     for(int i = 0; i<2; ++i){
        int hold = argvD[i];
-       printf("%d - hold\n", hold);
         if(hold >= 48 && hold <= 57){
             hold -= 48;
-            sum += hold;
-            if(i==0) sum *= 16;
-            printf("%d - sum\n", sum);
-
         }
-        else if(hold >= 97 && hold <= 102){
+        if(hold >= 97 && hold <= 102){
             hold -= 87;
-            sum += hold;
-            printf("%d - sum\n", sum);
         }
+        printf("%d, - Hold", hold);
     }
-    printf("%d - Fsum\n", sum);
-    return sum;
 }
 
 int main(int argc, char *argv[]){
@@ -123,11 +115,10 @@ int main(int argc, char *argv[]){
     int j = 1;
     while(j <=total){
         if(argv[j][1] == 'x'){
-            //printf("%s\n", argv[j]+2);
+            printf("%s\n", argv[j]+2);
             argvD[j] = argv[j]+2;
-            int temp = updateHexToDec(argvD[j]);
-            //printf("%d - test", test);
-            sprintf(argvD[j], "%d", temp);
+            printf("%d - T\n", argvD[j][1]);
+            updateHexToDec(argvD[j]);
         }else{
             argvD[j] = argv[j];
         }
@@ -136,11 +127,10 @@ int main(int argc, char *argv[]){
 
     //Update decimal to Hex
 
-/*
+
     for(int i = 1; i <= total; ++i){
         printf("%s - ", argvD[i]);
     }
-    */
     
     while(ans != 0){
         ans = menu();
@@ -148,16 +138,16 @@ int main(int argc, char *argv[]){
             addition(argvD, total);
         }
         else if(ans == 2){
-            substraction(argvD, total);
+            substraction(argv, total);
         }
         else if(ans == 3){
-            multiplication(argvD, total);
+            multiplication(argv, total);
         }
         else if(ans == 4){
-            division(argvD, total);
+            division(argv, total);
         }
         else if(ans == 5){
-            modulo(argvD, total);
+            modulo(argv, total);
         }
         else if(ans == 6){
             reverse(argv, total);
